@@ -1,0 +1,10 @@
+<h1>EDIT THIS PRODUCT</h1>
+<div class="container">
+  <%= simple_form_for (@product) do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :price %>
+    <%= f.input :stock %>
+    <%= f.submit class: 'btn btn-primary' %>
+  <% end %>
+</div>

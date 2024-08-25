@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="h2 my-3 d-flex justify-content-center">Product List</h1>
+
+      <div data-controller="search-products">
+        <%= form_with url: products_path, method: :get, html: {class: "mb-4"} do |f| %>
+          <%= f.label :query, "Type a product" %>
+          <%= f.text_field :query,
+                          class: "form-control",
+                          value: params[:query]
+                          %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1>Nossos Produtos</h1>
+  <div class="product-grid">
+    <% @products.each do |product| %>
+      <div class="product-card">
+        <%# <img src="<%= product.image_url %>" alt="<%= product.name %>" class="product-image"> %>
+        <h2 class="product-name"><%= product.name %></h2>
+        <p class="product-description"><%= product.description %></p>
+        <p class="product-price">$ <%= number_to_currency(product.price) %></p>
+        <%= link_to "Ver detalhes", product_path(product), class: "product-link" %>
+      </div>
+    <% end %>
+  </div>
+</div>

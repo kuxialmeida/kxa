@@ -72,3 +72,11 @@ gem "simple_form", "~> 5.3"
 gem "sassc-rails", "~> 2.1"
 
 gem "faker", "~> 3.4"
+
+gem "jbuilder", "~> 2.12"
+
+gem "font-awesome-sass", "~> 6.5"
+
+gem "autoprefixer-rails", "~> 10.4"
+
+ gem "dotenv-rails"

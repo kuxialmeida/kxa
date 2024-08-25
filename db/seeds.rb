@@ -11,17 +11,26 @@ require 'faker'
 
 puts "Cleanning Database"
 Product.destroy_all
+Category.destroy_all
 puts "Database cleaned"
 
 puts "Creating Products"
 
 10.times do
   Product.create(
-    name: Faker::Commerce.product_name,
-    description: Faker::Commerce.material,
+    name: Faker::Esport.player,
+    description: Faker::Esport.team,
     price: Faker::Commerce.price,
     stock: rand(1...20)
   )
 end
 
-puts "Created succesfully"
+puts "Products Created succesfully"
+
+puts "Creating Categories"
+Category.create [
+  {name: 'Energize'},
+  {name: 'Haste'},
+  {name: 'Alarme'}
+]
+puts "Category created successfuly"
