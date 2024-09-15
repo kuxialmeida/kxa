@@ -1,23 +1,32 @@
+<%= content_for(:navbar_class, "navbar-home") %>
 
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
-  <div class="container">
-    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
-    <p>Change your life and learn to code at one of our campuses around the world.</p>
-    <a class="btn btn-flat" href="#">Apply now</a>
+<div class="banner" style="background-image: url(https://res.cloudinary.com/dchyt1n73/image/upload/v1725733008/oiht28zmh492aqvkxduc.webp);">
+  <div class="banner-content text-center">
+    <h1>your safety: is your priority?</h1>
+    <p>KXA bring low cost solution for your safety</p>
+    <%= link_to "Start now", class: "btn btn-lg btn-primary"  %>
   </div>
 </div>
 
-<div class="container">
-  <h1>Mas comprados</h1>
-  <div class="product-grid">
-    <% @products.each do |product| %>
-      <div class="product-card">
-        <%# <img src="<%= product.image_url %>" alt="<%= product.name %>" class="product-image"> %>
-        <h2 class="product-name"><%= product.name %></h2>
-        <p class="product-description"><%= product.description %></p>
-        <p class="product-price">$ <%= number_to_currency(product.price) %></p>
-        <%= link_to "Ver detalhes", product_path(product), class: "product-link" %>
-      </div>
-    <% end %>
+<!--
+  <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+    <div class="container">
+      <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+      <p>Change your life and learn to code at one of our campuses around the world.</p>
+      <a class="btn btn-flat" href="#">Apply now</a>
+    </div>
   </div>
+-->
+
+<h1>Mas comprados</h1>
+<div class="product-grid">
+  <% @products.each do |product| %>
+    <div class="product-card">
+      <%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1722908921/samples/ecommerce/accessories-bag.jpg") %>
+      <h2 class="product-name"><%= product.name %></h2>
+      <p class="product-description"><%= product.description %></p>
+      <p class="product-price">$ <%= number_to_currency(product.price) %></p>
+      <%= link_to "Ver detalhes", product_path(product), class: "product-link" %>
+    </div>
+  <% end %>
 </div>

@@ -1,32 +1,73 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div class="col">
-      <h1 class="h2 my-3 d-flex justify-content-center">Product List</h1>
+    <% @products.each do |product| %>
+      <!-- Mobile-first: full-width column on small screens, 2 columns on medium screens, and 3 columns on large screens -->
+      <div class="col-12 col-sm-6 col-md-3 mb-4">
+        <div class="card h-100 shadow-sm">
+          <!-- Product Image using Cloudinary -->
+          <%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1726005574/ymohyphdu45vdonhvbt7.jpg", class: "card-img-top", height: 300, crop: :fill, gravity: :center) %>
 
-      <div data-controller="search-products">
-        <%= form_with url: products_path, method: :get, html: {class: "mb-4"} do |f| %>
-          <%= f.label :query, "Type a product" %>
-          <%= f.text_field :query,
-                          class: "form-control",
-                          value: params[:query]
-                          %>
-        <% end %>
+          <div class="card-body">
+            <h5 class="card-title text-center"><%= product.name %></h5>
+            <p class="card-text text-center text-muted">
+              <%= truncate(product.description, length: 100) %>
+            </p>
+            <p class="card-text text-center">
+              <%= number_to_currency(product.price) %>
+            </p>
+          </div>
+
+          <!-- Button at the bottom of the card -->
+          <div class="card-footer text-center">
+            <%= link_to 'View Product', product_path(product), class: 'btn btn-primary' %>
+          </div>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
 
-<div class="container">
+
+  <!-- div class="container mt-5">
+    <div class="row">
+      <% @products.each do |product| %>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 shadow-sm">
+            <!-- Product Image using Cloudinary >
+            <%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1726005574/ymohyphdu45vdonhvbt7.jpg", class: "card-img-top", height: 300, crop: :fill, gravity: :center) %>
+
+            <div class="card-body">
+              <h5 class="card-title text-center"><%= product.name %></h5>
+              <p class="card-text text-center text-muted">
+                <%= truncate(product.description, length: 100) %>
+              </p>
+              <p class="card-text text-center">
+                <%= number_to_currency(product.price) %>
+              </p>
+            </div>
+
+            <!-- Button at the bottom of the card ->
+            <div class="card-footer text-center">
+              <%= link_to 'View Product', product_path(product), class: 'btn btn-primary' %>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <--/div>
+
+
+
+<!--div class="product-container">
   <h1>Nossos Produtos</h1>
   <div class="product-grid">
     <% @products.each do |product| %>
       <div class="product-card">
-        <%# <img src="<%= product.image_url %>" alt="<%= product.name %>" class="product-image"> %>
         <h2 class="product-name"><%= product.name %></h2>
-        <p class="product-description"><%= product.description %></p>
+        <p class="product-description"><%= product.description.truncate(100) %></p>
         <p class="product-price">$ <%= number_to_currency(product.price) %></p>
         <%= link_to "Ver detalhes", product_path(product), class: "product-link" %>
       </div>
     <% end %>
   </div>
-</div>
+<--/div>

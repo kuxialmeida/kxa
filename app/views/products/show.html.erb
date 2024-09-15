@@ -1,27 +1,39 @@
 
 <div class="container mt-5">
   <div class="row">
-
     <div class="col-md-6">
+      <!-- Display product image -->
+      <% if @product.photos.any? %>
+        <%= image_tag @product.photos.first.url, class: 'img-fluid mb-4' %>
+      <% else %>
+        <p>No image available</p>
+      <% end %>
+
       <h1 class="display-4"><%= @product.name %></h1>
       <p class="lead text-muted"><%= @product.description %></p>
       <h3 class="text-primary">$<%= @product.price %></h3>
+
+      <!-- Uncomment the following section if needed -->
+      <!--
       <hr>
       <h5>Categories:</h5>
       <ul class="list-group">
         <% @product.categories.each do |category| %>
           <li class="list-group-item">
             <%= category.name %>
+            <%= @product.stock %>
           </li>
         <% end %>
       </ul>
       <hr>
+      -->
+
       <div class="mt-4">
         <%= link_to 'Edit Product', edit_product_path(@product), class: 'btn btn-warning' %>
-        <%= link_to "Back to Poducts", root_path, class: 'btn btn-secondary' %>
+        <%= link_to "Back to Products", root_path, class: 'btn btn-secondary' %>
         <%= link_to "Delete",
         product_path(@product), class: 'btn btn-danger',
-        data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+        data: { turbo_method: :delete, turbo_confirm: "Are you sure?" } %>
       </div>
     </div>
   </div>

@@ -1,72 +1,226 @@
 // Specific CSS for your home-page
 
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+// .container {
+//   width: 90%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 20px;
+// }
 
-h1 {
-  text-align: center;
-  margin-bottom: 20px;
-  color: #333;
-}
+// h1 {
+//   text-align: center;
+//   margin-bottom: 20px;
+//   color: #333;
+// }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-}
+// .product-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+//   gap: 10px;
+// }
 
-.product-card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  text-align: center;
-  transition: transform 0.3s ease;
-}
+// .product-card {
+//   background-color: #fff;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   padding: 9px;
+//   text-align: center;
+//   transition: transform 0.3s ease;
+// }
 
-.product-card:hover {
-  transform: scale(1.05);
-}
+// .product-card:hover {
+//   transform: scale(1.05);
+// }
 
-.product-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px 8px 0 0;
-}
+// .product-image {
+//   max-width: 100%;
+//   height: auto;
+//   border-radius: 8px 8px 0 0;
+// }
 
-.product-name {
-  font-size: 1.5em;
-  margin: 10px 0;
-  color: #555;
-}
+// .product-name {
+//   font-size: 1.5em;
+//   margin: 10px 0;
+//   color: #555;
+// }
 
-.product-description {
-  font-size: 1em;
-  color: #777;
-  margin: 10px 0;
-}
+// .product-description {
+//   font-size: 1em;
+//   color: #777;
+//   margin: 10px 0;
+// }
 
-.product-price {
-  font-size: 1.2em;
-  color: #000;
-  font-weight: bold;
-  margin: 10px 0;
-}
+// .product-price {
+//   font-size: 1.2em;
+//   color: #000;
+//   font-weight: bold;
+//   margin: 10px 0;
+// }
 
-.product-link {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
+// .product-link {
+//   display: inline-block;
+//   padding: 10px 20px;
+//   background-color: #007bff;
+//   color: #fff;
+//   text-decoration: none;
+//   border-radius: 4px;
+//   transition: background-color 0.3s ease;
+// }
 
-.product-link:hover {
-  background-color: #0056b3;
-}
+// .product-link:hover {
+//   background-color: #0056b3;
+// }
+
+// .container {
+//   width: 90%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+//   padding: 20px;
+
+//   @media (max-width: 768px) {
+//     padding: 15px;
+//   }
+
+//   @media (max-width: 480px) {
+//     padding: 10px;
+//   }
+// }
+
+// h1 {
+//   text-align: center;
+//   margin-bottom: 20px;
+//   color: #333;
+
+//   @media (max-width: 768px) {
+//     font-size: 1.8em;
+//     margin-bottom: 15px;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 1.5em;
+//     margin-bottom: 10px;
+//   }
+// }
+
+// .product-grid {
+//   display: grid;
+//   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+//   gap: 10px;
+
+//   @media (max-width: 768px) {
+//     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+//     gap: 8px;
+//   }
+
+//   @media (max-width: 480px) {
+//     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+//     gap: 5px;
+//   }
+// }
+
+// .product-card {
+//   background-color: #fff;
+//   border-radius: 8px;
+//   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//   padding: 15px;
+//   text-align: center;
+//   transition: transform 0.3s ease;
+
+//   &:hover {
+//     transform: scale(1.05);
+//   }
+
+//   @media (max-width: 768px) {
+//     padding: 8px;
+//   }
+
+//   @media (max-width: 480px) {
+//     padding: 7px;
+//   }
+// }
+
+// .product-image {
+//   max-width: 100%;
+//   height: auto;
+//   border-radius: 8px 8px 0 0;
+// }
+
+// .product-name {
+//   font-size: 1.5em;
+//   margin: 10px 0;
+//   color: #555;
+
+//   @media (max-width: 768px) {
+//     font-size: 1.3em;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 1.2em;
+//     margin: 8px 0;
+//   }
+// }
+
+// .product-description {
+//   font-size: 1em;
+//   color: #777;
+//   margin: 10px 0;
+
+//   @media (max-width: 768px) {
+//     font-size: 0.9em;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 0.8em;
+//     margin: 8px 0;
+//   }
+// }
+
+// .product-price {
+//   font-size: 1.2em;
+//   color: #000;
+//   font-weight: bold;
+//   margin: 10px 0;
+
+//   @media (max-width: 768px) {
+//     font-size: 1.1em;
+//   }
+
+//   @media (max-width: 480px) {
+//     font-size: 1em;
+//     margin: 8px 0;
+//   }
+// }
+
+// .product-link {
+//   display: inline-block;
+//   padding: 10px 20px;
+//   background-color: #007bff;
+//   color: #fff;
+//   text-decoration: none;
+//   border-radius: 4px;
+//   transition: background-color 0.3s ease;
+
+//   &:hover {
+//     background-color: #0056b3;
+//   }
+
+//   @media (max-width: 768px) {
+//     padding: 8px 16px;
+//   }
+
+//   @media (max-width: 480px) {
+//     padding: 6px 12px;
+//   }
+// }
+
+// .product-image {
+//   max-width: 100%;
+//   height: auto;
+//   border-radius: 8px 8px 0 0;
+//   object-fit: cover; // Adiciona essa propriedade para garantir que a imagem se ajuste bem dentro do contêiner
+
+//   @media (max-width: 480px) {
+//     width: 100%; // Garante que a imagem ocupe 100% da largura do contêiner em telas pequenas
+//     max-width: 100%;
+//   }
+// }
