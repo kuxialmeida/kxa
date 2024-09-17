@@ -21,7 +21,14 @@ puts "Creating Products"
     name: Faker::Esport.player,
     description: Faker::Esport.team,
     price: Faker::Commerce.price,
-    stock: rand(1...20)
+    stock: rand(1...20),
+    photos: [
+      ActiveStorage::Blob.create_and_upload!(
+        io: URI.open("https://res.cloudinary.com/dchyt1n73/image/upload/v1726405751/kwrdckynqbbgt4egwtu6.jpg"),
+        filename: "Merlin_M28S.jpg",
+        content_type: 'image/jpg',
+      ),
+    ]
   )
 end
 
