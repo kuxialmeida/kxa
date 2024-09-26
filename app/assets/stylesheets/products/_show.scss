@@ -1,72 +1,93 @@
 // app/assets/stylesheets/products.scss
 
-.product-show {
-  // General layout
+
+.main-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  max-width: 800px;
-  margin: 0 auto;
-
-  // Product name
-  h1 {
-    font-size: 2.5rem;
-    color: #333;
-    margin-bottom: 20px;
-  }
-
-  // Product image styling
-  .product-image {
-    width: 100%;
-    max-width: 400px;
-    margin-bottom: 20px;
-
-    img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-  }
-
-  // Product description styling
-  .product-description {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 20px;
-    text-align: center;
-  }
-
-  // Product price styling
-  .product-price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #28a745;
-    margin-bottom: 10px;
-  }
-
-  // Product stock styling
-  .product-stock {
-    font-size: 1.1rem;
-    color: #888;
-  }
-
-  // Media Queries for responsiveness
-  @media (max-width: 600px) {
-    padding: 10px;
-
-    h1 {
-      font-size: 2rem;
-    }
-
-    .product-description {
-      font-size: 1rem;
-    }
-
-    .product-price {
-      font-size: 1.5rem;
-    }
-  }
+  justify-content: space-between;
+  margin: 20px;
 }
+.main img {
+  width: 400px;
+}
+.carrosel {
+  display: flex;
+  flex-direction: row;
+  width: 400px;
+  height: 60px;
+  margin: px;
+}
+.card img {
+  -ms-flex-item-align: auto;
+  height: auto;
+}
+
+// .product-show {
+//   // General layout
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 20px;
+//   background-color: #f9f9f9;
+//   border-radius: 8px;
+//   max-width: 800px;
+//   margin: 0 auto;
+
+//   // Product name
+//   h1 {
+//     font-size: 2.5rem;
+//     color: #333;
+//     margin-bottom: 20px;
+//   }
+
+//   // Product image styling
+//   .product-image {
+//     width: 100%;
+//     max-width: 400px;
+//     margin-bottom: 20px;
+
+//     img {
+//       max-width: 100%;
+//       border-radius: 8px;
+//       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+//     }
+//   }
+
+//   // Product description styling
+//   .product-description {
+//     font-size: 1.2rem;
+//     color: #555;
+//     margin-bottom: 20px;
+//     text-align: center;
+//   }
+
+//   // Product price styling
+//   .product-price {
+//     font-size: 1.8rem;
+//     font-weight: bold;
+//     color: #28a745;
+//     margin-bottom: 10px;
+//   }
+
+//   // Product stock styling
+//   .product-stock {
+//     font-size: 1.1rem;
+//     color: #888;
+//   }
+
+//   // Media Queries for responsiveness
+//   @media (max-width: 600px) {
+//     padding: 10px;
+
+//     h1 {
+//       font-size: 2rem;
+//     }
+
+//     .product-description {
+//       font-size: 1rem;
+//     }
+
+//     .product-price {
+//       font-size: 1.5rem;
+//     }
+//   }
+// }

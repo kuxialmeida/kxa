@@ -25,7 +25,7 @@
       <%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1722908921/samples/ecommerce/accessories-bag.jpg") %>
       <h2 class="product-name"><%= product.name %></h2>
       <p class="product-description"><%= product.description %></p>
-      <p class="product-price">$ <%= number_to_currency(product.price) %></p>
+      <p class="product-price"><%= number_to_currency(product.price) %></p>
       <%= link_to "Ver detalhes", product_path(product), class: "product-link" %>
     </div>
   <% end %>

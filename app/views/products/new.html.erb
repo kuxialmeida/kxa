@@ -5,7 +5,8 @@
     <%= f.input :description %>
     <%= f.input :price %>
     <%= f.input :stock %>
-    <%= f.input :photos %>
+    <%= f.label :photos, "Photos" %>
+    <%= f.file_field :photos, multiple: true, direct_upload: true, class: 'form-control' %>
     <%= f.submit class: 'btn btn-primary' %>
   <% end %>
 </div>

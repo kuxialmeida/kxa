@@ -1,9 +1,84 @@
+<div class="main-container">
+  <div class="imagem">
+    <div class="main"><%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1726405751/kwrdckynqbbgt4egwtu6.jpg") %></div>
+    <div class="carrosel">
+      <div class="card"><%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1723300871/development/tdv9s27zaab4d1bup2ar5mb1limg.jpg") %></div>
+      <div class="card"><%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1723300838/development/ozn9cqes86dqfwzkn02rj1wwj4rr.jpg") %></div>
+      <div class="card"><%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1723300825/development/o25or23n92togcd4ufr99z34qx6f.jpg") %></div>
+      <div class="card"><%= cl_image_tag("https://res.cloudinary.com/dchyt1n73/image/upload/v1723300802/development/dvuodv50j9afkg53217pfao75pya.jpg") %></div>
+    </div>
+  </div>
 
-<div class="container mt-5">
+    <div div class="descricao">
+      <div class="detalhes">
+        <h1>@product.name</h1>
+        <p>Producto com grande demanda no mercado nacional e internacional, ao preco
+        mais lico do mercado.
+        </p>
+      </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<!--div class="container mt-5">
   <div class="row">
+    <!-- Product Image Carousel ->
     <div class="col-md-6">
-      <!-- Display product image -->
-      
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <% @product.photos.each_with_index do |photo, index| %>
+            <div class="carousel-item <%= 'active' if index == 0 %>">
+              <%= cl_image_tag url_for(@product.photos.first), class: 'img-fluid mb-4' %>
+            </div>
+          <% end %>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#productCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#productCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Product Details ->
+    <div class="col-md-6">
+      <h2><%= @product.name %></h2>
+      <p-><strong>Price:</strong> $<%= @product.price %></p>
+      <p-><strong>Description:</strong> <%= @product.description %></p>
+
+
+      <!-- Buy/Add to Cart Section ->
+
+    </div>
+  </div>
+
+  <!-- Thumbnails for the images below the carousel ->
+  <div class="row mt-4">
+    <% @product.photos.each do |photo| %>
+      <div class="col-2">
+        <%= image_tag photo, class: 'img-thumbnail', alt: @product.name %>
+      </div>
+    <% end %>
+  </div>
+</div-->
+
+
+<!--div class="container mt-5">
+  <div class="row">
+    <!-- Display product image ->
+    <div class="col-md-6">
+      <div id="productCarousel" class="carousel slide" data-bs-ride="carousel"></div>
       <% if @product.photos.attached? %>
         <%= image_tag url_for(@product.photos.first), class: 'img-fluid mb-4' %>
       <% else %>
@@ -15,8 +90,8 @@
       <p class="lead text-muted"><%= @product.description %></p>
       <h3 class="text-primary">$<%= @product.price %></h3>
 
-      <!-- Uncomment the following section if needed -->
-      <!--
+      <!-- Uncomment the following section if needed ->
+
       <hr>
       <h5>Categories:</h5>
       <ul class="list-group">
@@ -28,7 +103,6 @@
         <% end %>
       </ul>
       <hr>
-      -->
 
       <div class="mt-4">
         <%= link_to 'Edit Product', edit_product_path(@product), class: 'btn btn-warning' %>
@@ -39,4 +113,4 @@
       </div>
     </div>
   </div>
-</div>
+</div-->
